@@ -1,0 +1,64 @@
+﻿@model AlmoxarifadoViewer.Models.Produto
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Produto</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ProdutoId" />
+            <div class="form-group">
+                <label asp-for="CodigoSap" class="control-label"></label>
+                <input asp-for="CodigoSap" class="form-control" />
+                <span asp-validation-for="CodigoSap" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Imagem1" class="control-label"></label>
+                <input asp-for="Imagem1" class="form-control" />
+                <span asp-validation-for="Imagem1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Imagem2" class="control-label"></label>
+                <input asp-for="Imagem2" class="form-control" />
+                <span asp-validation-for="Imagem2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Imagem3" class="control-label"></label>
+                <input asp-for="Imagem3" class="form-control" />
+                <span asp-validation-for="Imagem3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Imagem4" class="control-label"></label>
+                <input asp-for="Imagem4" class="form-control" />
+                <span asp-validation-for="Imagem4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quantidade" class="control-label"></label>
+                <input asp-for="Quantidade" class="form-control" />
+                <span asp-validation-for="Quantidade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
